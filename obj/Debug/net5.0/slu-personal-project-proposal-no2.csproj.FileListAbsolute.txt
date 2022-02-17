@@ -1,0 +1,15 @@
+/Users/shiyaolu/Documents/GitHub/slu-personal-project-proposal-no2/bin/Debug/net5.0/slu-personal-project-proposal-no2.deps.json
+/Users/shiyaolu/Documents/GitHub/slu-personal-project-proposal-no2/bin/Debug/net5.0/slu-personal-project-proposal-no2.runtimeconfig.json
+/Users/shiyaolu/Documents/GitHub/slu-personal-project-proposal-no2/bin/Debug/net5.0/slu-personal-project-proposal-no2.runtimeconfig.dev.json
+/Users/shiyaolu/Documents/GitHub/slu-personal-project-proposal-no2/bin/Debug/net5.0/slu-personal-project-proposal-no2.dll
+/Users/shiyaolu/Documents/GitHub/slu-personal-project-proposal-no2/bin/Debug/net5.0/ref/slu-personal-project-proposal-no2.dll
+/Users/shiyaolu/Documents/GitHub/slu-personal-project-proposal-no2/bin/Debug/net5.0/slu-personal-project-proposal-no2.pdb
+/Users/shiyaolu/Documents/GitHub/slu-personal-project-proposal-no2/obj/Debug/net5.0/slu-personal-project-proposal-no2.csproj.AssemblyReference.cache
+/Users/shiyaolu/Documents/GitHub/slu-personal-project-proposal-no2/obj/Debug/net5.0/slu-personal-project-proposal-no2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/shiyaolu/Documents/GitHub/slu-personal-project-proposal-no2/obj/Debug/net5.0/slu-personal-project-proposal-no2.AssemblyInfoInputs.cache
+/Users/shiyaolu/Documents/GitHub/slu-personal-project-proposal-no2/obj/Debug/net5.0/slu-personal-project-proposal-no2.AssemblyInfo.cs
+/Users/shiyaolu/Documents/GitHub/slu-personal-project-proposal-no2/obj/Debug/net5.0/slu-personal-project-proposal-no2.csproj.CoreCompileInputs.cache
+/Users/shiyaolu/Documents/GitHub/slu-personal-project-proposal-no2/obj/Debug/net5.0/slu-personal-project-proposal-no2.dll
+/Users/shiyaolu/Documents/GitHub/slu-personal-project-proposal-no2/obj/Debug/net5.0/ref/slu-personal-project-proposal-no2.dll
+/Users/shiyaolu/Documents/GitHub/slu-personal-project-proposal-no2/obj/Debug/net5.0/slu-personal-project-proposal-no2.pdb
+/Users/shiyaolu/Documents/GitHub/slu-personal-project-proposal-no2/obj/Debug/net5.0/slu-personal-project-proposal-no2.genruntimeconfig.cache
