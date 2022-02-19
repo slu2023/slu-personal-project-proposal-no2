@@ -15,7 +15,7 @@ At a high level, the Cipher assignment works in the following way:
 1. Create a question asking the user's name
 
 
-2. Determine which translate direction is going to be used
+2. Determine which translate direction is going to be used, goes into second loop:ENG-CS or third loop: CS-ENG.
 
 
 3. Create a ENG-CS cipher method
@@ -34,21 +34,29 @@ At a high level, the Cipher assignment works in the following way:
 
 ## Flowchart
 
+![Image Text](overlook.jpeg)
+
 ## Methods
+
+static string OpeningQuestion(Question);
+
+### Opening class
+
+Display introduction, then jump to pronoun class.
 
 ### Pronoun class
 
+Ask the user how to address them, then use the user input to ask choice question.
+
 ### Choice class
+
+letting the user jump to ENG-CS or CS-ENG.
 
 ### English-ComputerLanguage class
 
-#### Encipher class
+#### Input class
 
-#### Decipher class
-
-#### DisplayResult class
-
-### ComputerLanguage class
+Has to be valid English.
 
 #### Encipher class
 
@@ -56,4 +64,22 @@ At a high level, the Cipher assignment works in the following way:
 
 #### DisplayResult class
 
-### Question class
+Display computer language.
+
+### ComputerLanguage-English class
+
+#### Input class
+
+Can't be null.
+
+#### Encipher class
+
+#### Decipher class
+
+#### DisplayResult class
+
+Display English.
+
+### Closing class
+
+Display question if wants to do another one, loops back or says goodbye.
