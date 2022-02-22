@@ -40,46 +40,46 @@ At a high level, the Cipher assignment works in the following way:
 
 static string OpeningQuestion(Question);
 
-### Opening class
+### Opening method
 
 Display introduction, then jump to pronoun class.
 
-### Pronoun class
+### Pronoun method
 
 Ask the user how to address them, then use the user input to ask choice question.
 
-### Choice class
+### Choice method
 
 letting the user jump to ENG-CS or CS-ENG.
 
-### English-ComputerLanguage class
+### English-ComputerLanguage method
 
-#### Input class
+#### Input method
 
 Has to be valid English.
 
-#### Encipher class
+#### Encipher method
 
-#### Decipher class
+#### Decipher method
 
-#### DisplayResult class
+#### DisplayResult method
 
 Display computer language.
 
-### ComputerLanguage-English class
+### ComputerLanguage-English method
 
-#### Input class
+#### Input method
 
 Can't be null.
 
-#### Encipher class
+#### Encipher method
 
-#### Decipher class
+#### Decipher method
 
-#### DisplayResult class
+#### DisplayResult method
 
 Display English.
 
-### Closing class
+### Closing method
 
 Display question if wants to do another one, loops back or says goodbye.
