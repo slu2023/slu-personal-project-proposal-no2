@@ -35,6 +35,9 @@ At a high level, the Cipher assignment works in the following way:
 ## Flowchart
 
 ![Image Text](overlook.jpeg)
+![Image Text](loop1.jpeg)
+![Image Text](loop2.jpeg)
+![Image Text](closing.jpeg)
 
 ## Methods
 
@@ -42,44 +45,61 @@ static string OpeningQuestion(Question);
 
 ### Opening method
 
-Display introduction, then jump to pronoun class.
+1. Display introduction.
 
 ### Pronoun method
 
-Ask the user how to address them, then use the user input to ask choice question.
+1. Display question "How to address the user?".
+2. Store the user input inside a string.
 
 ### Choice method
 
-letting the user jump to ENG-CS or CS-ENG.
+1. Display text with user input.
+2. Shows a for each loop allowing the user to select between loop 2 and loop 3.
+3. If the user didn't pick a choice, return invalided input.
+4. Bring the user into the room they just selected.
 
 ### English-ComputerLanguage method
 
+string newMessage = string.empty;
+foreach(char c in message)
+{
+   new message += (char)(c + this.shift);
+}
+return newMessage;
+
 #### Input method
 
-Has to be valid English.
-
-#### Encipher method
-
-#### Decipher method
+Console.WriteLine = "Input the text that you want to translate:";
+Text = Console.ReadLine;
 
 #### DisplayResult method
 
 Display computer language.
+result = newMessage;
 
 ### ComputerLanguage-English method
 
+string newMessage = string.empty;
+foreach(char c in message)
+{
+   new message += (char)(c - this.shift);
+}
+return newMessage;
+
 #### Input method
 
-Can't be null.
-
-#### Encipher method
-
-#### Decipher method
+Console.WriteLine = "Input the information that you want to translate:";
+Information = Console.ReadLine;
 
 #### DisplayResult method
 
-Display English.
+Display computer language.
+result = newMessage;
 
 ### Closing method
 
-Display question if wants to do another one, loops back or says goodbye.
+1. Display closing.
+2. Shows a question asking if the user wants to generate another one.
+3. If yes, loop back to intro where the entire process starts again.
+4. Else, return goodbye.
