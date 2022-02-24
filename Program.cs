@@ -16,7 +16,7 @@ namespace slu_personal_project_proposal_no2
         // </summary>
         // <param name="prompt">The message to display to the user</param>
         // <returns>The positive number the user chose</returns>
-        public static string Pronoun ()
+        public static string Pronoun()
         {
             // 1. Display the question
             // 2. Take the user input
@@ -28,8 +28,8 @@ namespace slu_personal_project_proposal_no2
         // </summary>
         // <param name="prompt">The message to display to the user</param>
         // <returns>The positive number the user chose</returns>
-        
-        public static int Choice (List<string> Choice)
+
+        public static int Choice(List<string> Choice)
         {
             // 1. Display the question with the user input
             // 2. Take the user input
@@ -43,7 +43,7 @@ namespace slu_personal_project_proposal_no2
         // </summary>
         // <param name="prompt">The message to display to the user</param>
         // <returns>The positive number the user chose</returns>
-        public static string ENG_CS (string text)
+        public static string ENG_CS(string text)
         {
             static string UserInput()
             {
@@ -62,7 +62,7 @@ namespace slu_personal_project_proposal_no2
         // </summary>
         // <param name="prompt">The message to display to the user</param>
         // <returns>The positive number the user chose</returns>
-        public static string CS_ENG (string text)
+        public static string CS_ENG(string text)
         {
             static string UserInput()
             {
@@ -81,13 +81,13 @@ namespace slu_personal_project_proposal_no2
         // </summary>
         // <param name="prompt">The message to display to the user</param>
         // <returns>The positive number the user chose</returns>
-        public static int Choice (List<string> Decision)
+        public static int Closing(List<string> Decision)
         {
             // 1. Display "Do you want to generate another one?"
             // 2. If the user selected yes, loop back all the way to the beginning.
             // 3. If the user picked no, display goodbye and end of program.
             // 4. Else, invalided pick
         }
-    
+
     }
 }
