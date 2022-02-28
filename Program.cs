@@ -6,6 +6,7 @@ namespace slu_personal_project_proposal_no2
     class Program
     {
         public static object CipherTranslation;
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
@@ -20,6 +21,7 @@ namespace slu_personal_project_proposal_no2
         {
             // 1. Display the question
             // 2. Take the user input
+            return null;
         }
 
         // <summary>
@@ -35,6 +37,7 @@ namespace slu_personal_project_proposal_no2
             // 2. Take the user input
             // 3. Bring the user to one of the rooms
             // 4. Display invalided input if the userinput is out of range
+            return -1;
         }
 
         // <summary>
@@ -45,14 +48,12 @@ namespace slu_personal_project_proposal_no2
         // <returns>The positive number the user chose</returns>
         public static string ENG_CS(string text)
         {
-            static string UserInput()
-            {
+            string userInput = Console.ReadLine();
                 // 1. Display "What do you want to generate?"
                 // 2. Waiting for the user to type something
                 // 3. Run test
                 // 4. Display result
-            }
-            return result;
+            return null;
 
         }
 
@@ -64,14 +65,12 @@ namespace slu_personal_project_proposal_no2
         // <returns>The positive number the user chose</returns>
         public static string CS_ENG(string text)
         {
-            static string UserInput()
-            {
+            string userInput = Console.ReadLine();
                 // 1. Display "What do you want to generate?"
                 // 2. Waiting for the user to type something
                 // 3. Run test
                 // 4. Display result
-            }
-            return result;
+            return null;
 
         }
 
@@ -87,6 +86,7 @@ namespace slu_personal_project_proposal_no2
             // 2. If the user selected yes, loop back all the way to the beginning.
             // 3. If the user picked no, display goodbye and end of program.
             // 4. Else, invalided pick
+            return -1;
         }
 
     }

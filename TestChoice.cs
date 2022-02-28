@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace ExampleProject
@@ -7,35 +8,18 @@ namespace ExampleProject
     {
         public static bool RunTest()
         {
-            Choice ChoiceQuestion = new Choice();
-            ChoiceQuestion.choice = "{UserInput}, what do you want to do today?";
-            ChoiceQuestion.answers.Add("ENG_CS");
-            ChoiceQuestion.answers.Add("CS_ENG");
-            return false;
+        List<int>testChoice = new List<int>();
+            testChoice.Add("Do you want to translate another one?");
+            testChoice.Add("1. Yes!");
+            testChoice.Add("2. No.");
+            int result = Program.Choice(testChoice);
+            int expected1 = 1;
 
-            Console.WriteLine("Expected: ENG_CS");
-            Console.WriteLine("Type 1 for example, this should be a valide input");
-            Console.WriteLine("Type 2 for example, this should be a valide input");
+            if (result != expected1)
+            {
+                Console.Error.WriteLine($"Failure: Expected {expected1} but result was {result}.");
+            }
             
-
-            int result = Program.Choice(choiceQuestion);
-            int expected = 1;
-
-            if (result != expected)
-            {
-                Console.Error.WriteLine($"Failure: Expected {expected} but result was {result}.");
-            }
-            return false;
-
-            if (result = null)
-            {
-                Console.Error.WriteLine($"Failure: result can't be null.");
-            }
-            return false;
-            public class Choice
-        {
-            public string choice;
-        }
     }
 }
 }
