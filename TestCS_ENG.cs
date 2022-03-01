@@ -16,6 +16,8 @@ namespace slu_personal_project_proposal_no2
                 Console.Error.WriteLine($"Failure: Expected {expected} but result was {result}.");
                 return false;
             }
+
+            return true;
         }
 
         // private static string Decrypt(string message)

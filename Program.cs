@@ -9,7 +9,29 @@ namespace slu_personal_project_proposal_no2
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            if (args.Length > 0 && args[0] == "test")
+            {
+                TestAll();
+                return;
+            }
+        }
+
+        
+        public static void TestAll()
+        {
+            bool testCipherTranslation = TestCipherTranslation.RunTest();
+            Console.WriteLine($"Test LoadFile(filename):{testCipherTranslation}");
+
+            bool testPronoun = TestPronoun.RunTest();
+            Console.WriteLine($"Test Pronoun(options):{testCipherTranslation}");
+            bool testChoice = TestChoice.RunTest();
+            Console.WriteLine($"Test Choice(options):{testCipherTranslation}");
+            bool testENG_CS = TestENG_CS.RunTest();
+            Console.WriteLine($"Test ENG_CS(options):{testCipherTranslation}");
+            bool testCS_ENG = TestCS_ENG.RunTest();
+            Console.WriteLine($"Test CS_ENG(options):{testCipherTranslation}");
+            bool testClosing = TestClosing.RunTest();
+            Console.WriteLine($"Test Closing(options):{testCipherTranslation}");
         }
 
         // <summary>
@@ -21,7 +43,13 @@ namespace slu_personal_project_proposal_no2
         {
             // 1. Display the question
             // 2. Take the user input
+            
             return null;
+        }
+
+        public static int Choice(List<string> testChoice)
+        {
+            return -1;
         }
 
         // <summary>
@@ -29,16 +57,16 @@ namespace slu_personal_project_proposal_no2
         // Looping until the user picked a valide choice.
         // </summary>
         // <param name="prompt">The message to display to the user</param>
-        // <returns>The positive number the user chose</returns>
+        // // <returns>The positive number the user chose</returns>
 
-        public static int Choice(List<string> Choice)
-        {
-            // 1. Display the question with the user input
-            // 2. Take the user input
-            // 3. Bring the user to one of the rooms
-            // 4. Display invalided input if the userinput is out of range
-            return -1;
-        }
+        // public static string Choice(List<string> Choice)
+        // {
+        //     // 1. Display the question with the user input
+        //     // 2. Take the user input
+        //     // 3. Bring the user to one of the rooms
+        //     // 4. Display invalided input if the userinput is out of range
+        //     return null;
+        // }
 
         // <summary>
         // Asking the user to type some valide input.
