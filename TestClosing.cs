@@ -23,8 +23,8 @@ namespace slu_personal_project_proposal_no2
 
             List<string>testDecisions = new List<string>();
             testDecisions.Add("Do you want to translate another one?");
-            testDecisions.Add("1. Yes!");
-            testDecisions.Add("2. No.");
+            testDecisions.Add("Yes!");
+            testDecisions.Add("No.");
             int result = Program.Closing(testDecisions);
             int expected = 1;
 
@@ -37,7 +37,7 @@ namespace slu_personal_project_proposal_no2
             //TODO(jcollard 2022-03-03): Great start! You should consider adding a few more test cases here.
 
             // TODO(jcollard 2022-03-03): At the end of your test, you should return true (because it succeeded)
-            return false;
+            return true;
 
         }
 

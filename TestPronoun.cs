@@ -23,7 +23,7 @@ namespace slu_personal_project_proposal_no2
                 return false;
             }
 
-            return false;
+            return true;
         }
 
         public class Pronoun

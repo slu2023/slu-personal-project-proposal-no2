@@ -8,7 +8,7 @@ namespace slu_personal_project_proposal_no2
         public static bool RunTest()
         {
 
-            string result = Program.ENG_CS("mfuud");
+            string result = Program.CS_ENG("mfuud");
             string expected = "HAPPY";
 
             if (result != expected)
