@@ -6,8 +6,9 @@ namespace slu_personal_project_proposal_no2
     class Program
     {
         public static object CipherTranslation;
+        private static string words;
 
-        static void Main(string[] args)
+        static void Main(string[] args, string text)
         {
             if (args.Length > 0 && args[0] == "test")
             {
@@ -15,12 +16,48 @@ namespace slu_personal_project_proposal_no2
                 return;
             }
 
+            string display = Opening();
+            
             string name = Pronoun();
             Console.WriteLine($"What a wonderful name, {name}!");
 
+            Console.WriteLine("What do you want to do today {name}?");
+
+            List<string> choices = new List<string>();
+            choices.Add("Translate ENG to CS.");
+            choices.Add("Translate CS to ENG");
+            int options = Choice(choices);
+
+            Console.WriteLine("What do you want to generate?");
+            List<string> eng_cs = new List<string>();
+            eng_cs.Add(text);
+            string Text = Console.ReadLine();
+            string E_C = ENG_CS(eng_cs);
+
+            Console.WriteLine("What do you want to generate?");
+            List<string> cs_eng = new List<string>();
+            cs_eng.Add(words);
+            string Words = Console.ReadLine();
+            string C_E = CS_ENG(cs_eng);
+            
+            List<string> endchoice = new List<string>();
+            endchoice.Add("Choices 1?");
+            endchoice.Add("Choices 2?");
+            int end = Closing(endchoice);
+
+
         }
 
-        
+        private static string CS_ENG(List<string> cs_eng)
+        {
+            throw new NotImplementedException();
+        }
+
+        private static string ENG_CS(List<string> eng_cs)
+        {
+            throw new NotImplementedException();
+        }
+
         public static void TestAll()
         {
             // bool testCipherTranslation = TestCipherTranslation.RunTest();
@@ -30,8 +67,8 @@ namespace slu_personal_project_proposal_no2
             // Console.WriteLine($"Test Pronoun(options):{testCipherTranslation}");
             // bool testPronoun = TestPronoun.RunTest();
             // Console.WriteLine($"Test Pronoun(options):{testPronoun}");
-            bool testChoice = TestChoice.RunTest();
-            Console.WriteLine($"Test Choice(options):{testChoice}");
+            // bool testChoice = TestChoice.RunTest();
+            // Console.WriteLine($"Test Choice(options):{testChoice}");
             // bool testENG_CS = TestENG_CS.RunTest();
             // Console.WriteLine($"Test ENG_CS(options):{testCipherTranslation}");
             // bool testCS_ENG = TestCS_ENG.RunTest();
@@ -92,11 +129,11 @@ namespace slu_personal_project_proposal_no2
                 // Choice(options);
                 if (choice >= 2)
                 {
-                    Console.Error.WriteLine("Number must be less than or equal to 2.");
+                    Console.Error.WriteLine("Number must be less than 2.");
                 }
                 if (choice < 1)
                 {
-                    Console.Error.WriteLine("Number has to be bigger than or equal to 1");
+                    Console.Error.WriteLine("Number has to be 0 or 1");
                 }
             }
             while (choice >= 2 || choice < 1);
@@ -128,9 +165,9 @@ namespace slu_personal_project_proposal_no2
         // <returns>The positive number the user chose</returns>
         public static string ENG_CS(string text)
         {
-            string userInput = Console.ReadLine();
-            Console.WriteLine();
-            Console.WriteLine( "What do you want to generate?");
+            // string userInput = Console.ReadLine();
+            // Console.WriteLine();
+            Console.WriteLine( "What text you want to generate?");
             string input = Console.ReadLine();
             Console.WriteLine("result");
                 // 1. Display: what do you want to generate?
@@ -149,8 +186,8 @@ namespace slu_personal_project_proposal_no2
         // <returns>The positive number the user chose</returns>
         public static string CS_ENG(string text)
         {
-            string userInput = Console.ReadLine();
-            Console.WriteLine();
+            // string userInput = Console.ReadLine();
+            // Console.WriteLine();
             Console.Write( "What do you want to generate?");
             string input = Console.ReadLine();
             Console.WriteLine("result");
@@ -182,17 +219,39 @@ namespace slu_personal_project_proposal_no2
             if (decision.Count == 0) throw new ArgumentException("The List of options must contain at least 1 option.");
             
             int ix = 1;
+            Console.WriteLine("Do you wanna generate another one?");
             foreach (string option in decision)
             {
                 Console.WriteLine($"{ix}.{option}");
                 ix = ix +1;
             }
 
-            List<string> options = new List<string>();
-            options.Add("Yes!");
-            options.Add("No.");
-            Closing(options);
-            return -1;
+            int closing;
+            do
+            {
+                string userInput;
+                userInput = Console.ReadLine();
+                // Parse translates the user input into an int value
+                 closing = int.Parse(userInput);
+
+
+                // List<string> options = new List<string>();
+                // options.Add("Yes!");
+                // options.Add("No.");
+                // Choice(options);
+                if (closing >= 2)
+                {
+                    Console.Error.WriteLine("Number must be less than 2.");
+                }
+                if (closing < 1)
+                {
+                    Console.Error.WriteLine("Number has to be 0 or 1");
+                }
+            }
+            while (closing >= 2 || closing < 1);
+
+            return closing;
+
         }
 
     }
