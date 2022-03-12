@@ -8,7 +8,7 @@ namespace slu_personal_project_proposal_no2
         public static object CipherTranslation;
         private static string words;
 
-        static void Main(string[] args, string text)
+        static void Main(string[] args)
         {
             if (args.Length > 0 && args[0] == "test")
             {
@@ -16,46 +16,46 @@ namespace slu_personal_project_proposal_no2
                 return;
             }
 
-            string display = Opening();
-            
-            string name = Pronoun();
-            Console.WriteLine($"What a wonderful name, {name}!");
+            while (true)
+            {
+                string display = Opening();
 
-            Console.WriteLine("What do you want to do today {name}?");
+                string name = Pronoun();
+                Console.WriteLine($"What a wonderful name, {name}!");
 
-            List<string> choices = new List<string>();
-            choices.Add("Translate ENG to CS.");
-            choices.Add("Translate CS to ENG");
-            int options = Choice(choices);
+                Console.WriteLine("What do you want to do today {name}?");
 
-            Console.WriteLine("What do you want to generate?");
-            List<string> eng_cs = new List<string>();
-            eng_cs.Add(text);
-            string Text = Console.ReadLine();
-            string E_C = ENG_CS(eng_cs);
+                List<string> choices = new List<string>();
+                choices.Add("Translate ENG to CS.");
+                choices.Add("Translate CS to ENG");
+                int options = Choice(choices);
 
-            Console.WriteLine("What do you want to generate?");
-            List<string> cs_eng = new List<string>();
-            cs_eng.Add(words);
-            string Words = Console.ReadLine();
-            string C_E = CS_ENG(cs_eng);
-            
-            List<string> endchoice = new List<string>();
-            endchoice.Add("Choices 1?");
-            endchoice.Add("Choices 2?");
-            int end = Closing(endchoice);
+                if (options == 1)
+                {
+                    Console.WriteLine("What do you want to generate?");
+                    string Text = Console.ReadLine();
+                    string E_C = ENG_CS(Text);
+                    Console.WriteLine(E_C);
+                }
+                else
+                {
+                    Console.WriteLine("What do you want to generate?");
+                    string Words = Console.ReadLine();
+                    string C_E = CS_ENG(Words);
+                    Console.WriteLine(C_E);
+                }
+
+                List<string> endchoice = new List<string>();
+                endchoice.Add("Yes!");
+                endchoice.Add("No.");
+                int end = Closing(endchoice);
+                if(end == 2) // If we should end
+                {
+                    return;
+                }
+            }
 
 
-        }
-
-        private static string CS_ENG(List<string> cs_eng)
-        {
-            throw new NotImplementedException();
-        }
-
-        private static string ENG_CS(List<string> eng_cs)
-        {
-            throw new NotImplementedException();
         }
 
         public static void TestAll()
@@ -82,15 +82,15 @@ namespace slu_personal_project_proposal_no2
         // </summary>
         // <param name="prompt">The message to display to the user</param>
         // <returns>The positive number the user chose</returns>
-        
+
         // OPENING HERE:
         public static string Opening()
         {
             Console.WriteLine("This Cipher assignment will help you write your secret messages in a cipher code.  No else person will be able to read what you mean unless they can communicate with a computer!");
             return null;
         }
-        
-        
+
+
         // PRONOUN HERE:
         public static string Pronoun()
         {
@@ -105,12 +105,12 @@ namespace slu_personal_project_proposal_no2
         {
             if (choices == null) throw new ArgumentNullException("List of options may not be null.");
             if (choices.Count == 0) throw new ArgumentException("The List of options must contain at least 1 option.");
-            
+
             int ix = 1;
             foreach (string option in choices)
             {
                 Console.WriteLine($"{ix}.{option}");
-                ix = ix +1;
+                ix = ix + 1;
             }
 
             // get input here
@@ -120,14 +120,14 @@ namespace slu_personal_project_proposal_no2
                 string userInput;
                 userInput = Console.ReadLine();
                 // Parse translates the user input into an int value
-                 choice = int.Parse(userInput);
+                choice = int.Parse(userInput);
 
 
                 // List<string> options = new List<string>();
                 // options.Add("Yes!");
                 // options.Add("No.");
                 // Choice(options);
-                if (choice >= 2)
+                if (choice > 2)
                 {
                     Console.Error.WriteLine("Number must be less than 2.");
                 }
@@ -136,7 +136,7 @@ namespace slu_personal_project_proposal_no2
                     Console.Error.WriteLine("Number has to be 0 or 1");
                 }
             }
-            while (choice >= 2 || choice < 1);
+            while (choice > 2 || choice < 1);
 
             return choice;
         }
@@ -167,14 +167,12 @@ namespace slu_personal_project_proposal_no2
         {
             // string userInput = Console.ReadLine();
             // Console.WriteLine();
-            Console.WriteLine( "What text you want to generate?");
-            string input = Console.ReadLine();
-            Console.WriteLine("result");
-                // 1. Display: what do you want to generate?
-                // 2. Waiting for the user to type something
-                // 3. Run test
-                // 4. Display result
-            return null;
+            string newMessage = string.Empty;
+            foreach (char c in text)
+            {
+                newMessage += (char)(c - text.Length);
+            }
+            return newMessage;
 
         }
 
@@ -188,14 +186,12 @@ namespace slu_personal_project_proposal_no2
         {
             // string userInput = Console.ReadLine();
             // Console.WriteLine();
-            Console.Write( "What do you want to generate?");
-            string input = Console.ReadLine();
-            Console.WriteLine("result");
-                // 1. Display "What do you want to generate?"
-                // 2. Waiting for the user to type something
-                // 3. Run test
-                // 4. Display result
-            return null;
+            string newMessage = string.Empty;
+            foreach (char c in text)
+            {
+                newMessage += (char)(c + text.Length);
+            }
+            return newMessage;
 
         }
 
@@ -205,8 +201,8 @@ namespace slu_personal_project_proposal_no2
         // </summary>
         // <param name="prompt">The message to display to the user</param>
         // <returns>The positive number the user chose</returns>
-        
-        
+
+
         // CLOSING HERE:
         public static int Closing(List<string> decision)
         {
@@ -214,16 +210,16 @@ namespace slu_personal_project_proposal_no2
             // 2. If the user selected yes, loop back all the way to the beginning.
             // 3. If the user picked no, display goodbye and end of program.
             // 4. Else, invalided pick
-        
+
             if (decision == null) throw new ArgumentNullException("List of options may not be null.");
             if (decision.Count == 0) throw new ArgumentException("The List of options must contain at least 1 option.");
-            
+
             int ix = 1;
             Console.WriteLine("Do you wanna generate another one?");
             foreach (string option in decision)
             {
                 Console.WriteLine($"{ix}.{option}");
-                ix = ix +1;
+                ix = ix + 1;
             }
 
             int closing;
@@ -232,7 +228,7 @@ namespace slu_personal_project_proposal_no2
                 string userInput;
                 userInput = Console.ReadLine();
                 // Parse translates the user input into an int value
-                 closing = int.Parse(userInput);
+                closing = int.Parse(userInput);
 
 
                 // List<string> options = new List<string>();
