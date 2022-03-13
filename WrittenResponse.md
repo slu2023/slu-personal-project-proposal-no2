@@ -164,6 +164,10 @@ Describes in general what the identified procedure does and how it contributes t
 
 Given a series of questions to the user, score the points when the player enters an answer.  This is the main functionality of my program.
 
+“The Choice method accepts a "choices" as a parameter, displays the question, displays a list of choices, then waits for the user to select one. Finally, it returns the result that the player selected.”
+
+
+
 ### 3c iv.
 
 Explains in detailed steps how the algorithm implemented in the identified procedure works. Your explanation must be detailed enough for someone else to recreate it.
